@@ -10,8 +10,7 @@ var Froogaloop = (function(){
         hasWindowEvent = false,
         isReady = false,
         slice = Array.prototype.slice,
-        playerOrigin = '*',
-        elem;
+        playerOrigin = '*';
 
     Froogaloop.fn = Froogaloop.prototype = {
         element: null,
@@ -22,7 +21,6 @@ var Froogaloop = (function(){
             }
 
             this.element = iframe;
-            elem = iframe;
 
             return this;
         },
@@ -128,30 +126,6 @@ var Froogaloop = (function(){
         target.contentWindow.postMessage(data, playerOrigin);
     }
 
-    //not in use
-    function onMessageReceived2(event) {
-        var data, method;
-
-        try {
-            data = JSON.parse(event.data);
-            method = data.event || data.method;
-        }
-        catch (e) {
-            //fail silently... like a ninja!
-        }
-
-        if (method == 'ready' && !isReady) {
-            isReady = true;
-        }
-
-        // Handles messages from the vimeo player only
-        if (!(/^https?:\/\/player.vimeo.com/).test(event.origin)) {
-            return false;
-        }
-
-        console.log('RTFLonMessageReceived2');
-    }
-
     /**
      * Event that fires whenever the window receives a message from its parent
      * via window.postMessage.
@@ -175,9 +149,6 @@ var Froogaloop = (function(){
         if (!(/^https?:\/\/player.vimeo.com/).test(event.origin)) {
             return false;
         }
-
-        //console.log('elem: ' + elem);
-        //console.log(event);
 
         if (playerOrigin === '*') {
             playerOrigin = event.origin;

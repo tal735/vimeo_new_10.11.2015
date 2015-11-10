@@ -8,11 +8,11 @@ function loadjscssfile(filename, filetype) {
         fileref.setAttribute("type", "text/javascript");
         fileref.setAttribute("src", filename);
     }
-    if (typeof fileref!="undefined")
+    if (typeof fileref != "undefined")
         document.getElementsByTagName("head")[0].appendChild(fileref);
 }
 
-//loadjscssfile("//f.vimeocdn.com/js/froogaloop2.min.js", "js"); //dynamically load and add this .js file
+//loadjscssfile("//f.vimeocdn.com/js/froogaloop2.min.js", "js"); //dynamically load and add this .js file. there is no need to load vimeo's original froogaloop. it is either used by the site admin or not. we should not bother about it.
 loadjscssfile("rtful_froogaloop.js", "js"); //dynamically load and add this .js file
 
 // store all vimeo iframes for later reference
@@ -20,22 +20,25 @@ var vimeo_iframes = []
 //detect vimeo video vimeo_src_regex
 var vimeo_src_regex = /(.)*player.vimeo.com(.)*$/i;
 //get all iframes in page
-var iframes=$('iframe');
+var iframes = $('iframe');
 //look only for vimeo iframes
-for (i=0; i<iframes.length; i++) {
+for (i = 0; i < iframes.length; i++) {
     /// FIX SRC ATTRIBUTE IF NEEDED:
     // "https://player.vimeo.com/video/76979866" ----> "https://player.vimeo.com/video/76979866?api=1"
     var iframe = iframes[i];
     var iframe_src_attr = iframe.getAttribute('src');
     //check if 'src' is of form '...player.vimeo.com/...'
-    if (vimeo_src_regex.test(iframe_src_attr)) {
+    if (!vimeo_src_regex.test(iframe_src_attr)) {
+    } else {
         //check if 'api=1' exists in 'src'                      /**********************************/
                                                                 /*                                */
-        var api_regex = /(.)*api=1(.)*$/i;                      /*     Adding events works        */
+        var api_regex = /(.)*api=1(.)*$/i;                      /*                                */
+                                                                /*     Adding events works        */
         if (!api_regex.test(iframe_src_attr)) {                 /*     also without modifying     */
             //if not, add it                                    /*     src to &/?api=1            */
             if (iframe_src_attr.indexOf('?') == -1) {           /*                                */
-                iframe_src_attr = iframe_src_attr + '?api=1';   /**********************************/
+                iframe_src_attr = iframe_src_attr + '?api=1';   /*                                */
+                                                                /**********************************/
             } else {
                 iframe_src_attr = iframe_src_attr + '&api=1';
             }
@@ -44,8 +47,8 @@ for (i=0; i<iframes.length; i++) {
 
         //add id to element if not exists
         var id = iframe.getAttribute('id');
-        if (id == null){
-            var idname = 'rtfulvpid_'+i;
+        if (id == null) {
+            var idname = 'rtfulvpid_' + i;
             iframe.setAttribute('id', idname);
             iframe_src_attr = iframe_src_attr + '&player_id=' + idname;
             iframe.setAttribute('src', iframe_src_attr);
@@ -56,25 +59,22 @@ for (i=0; i<iframes.length; i++) {
     }
 }
 
-$(window).load(function(){
-    console.log("$(window).load(function");
-    $(function() {
-        console.log("$(function")
-        //var iframe = $('iframe')[0];
-        for (i=0; i<vimeo_iframes.length; i++) {
+$(window).load(function () {
+    $(function () {
+        for (i = 0; i < vimeo_iframes.length; i++) {
             var player = $f_rtfl(vimeo_iframes[i]);
 
             player.addEvent('ready', function (id) {
-                alert('ready');
+                console.log('ready' + ' ' + id);
 
                 player.addEvent('play', function (id) {
-                    alert('play');
+                    console.log('play');
                 });
-                player.addEvent('pause',function (id) {
-                    alert('paused');
+                player.addEvent('pause', function (id) {
+                    console.log('paused');
                 });
                 player.addEvent('finish', function (id) {
-                    alert('finished');
+                    console.log('finished');
                 });
             });
         }
@@ -85,7 +85,7 @@ $(window).load(function(){
  NOTES:
 
  VIMEO's MUST HAVES REQUIREMENTS:
-    src=...?api=1&player_id=SOME_ID
+ src=...?api=1&player_id=SOME_ID
 
  1. api=1 in src is not necessary for some reason...
  2. same goes for playerid (id=..) which vimeo states is necessary
