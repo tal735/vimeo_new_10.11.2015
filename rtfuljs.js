@@ -85,7 +85,11 @@ $(window).load(function(){
 
 /*
  NOTES:
+
+ VIMEO's MUST HAVES REQUIREMENTS:
+    src=...?api=1&player_id=SOME_ID
+
  1. api=1 in src is not necessary for some reason...
  2. same goes for playerid (id=..) which vimeo states is necessary
- 3.
+ 3. exception is raised in the browser at first load but everything works fine nontheless.
  */

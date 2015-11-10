@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e81e1ea2-f150-4c53-9c3a-2d9fd32b84ff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtfuljs.js" afterPath="$PROJECT_DIR$/rtfuljs.js" />
     </list>
     <ignored path="testViemo.iws" />
@@ -37,8 +36,8 @@
       <file leaf-file-name="rtfuljs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rtfuljs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5187166">
-              <caret line="60" column="14" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.88770056">
+              <caret line="93" column="90" selection-start-line="93" selection-start-column="90" selection-end-line="93" selection-end-column="90" />
               <folding>
                 <element signature="n#!!doc;n#loadjscssfile#0" expanded="false" />
               </folding>
@@ -270,8 +269,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rtfuljs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5187166">
-          <caret line="60" column="14" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.88770056">
+          <caret line="93" column="90" selection-start-line="93" selection-start-column="90" selection-end-line="93" selection-end-column="90" />
           <folding>
             <element signature="n#!!doc;n#loadjscssfile#0" expanded="false" />
           </folding>
