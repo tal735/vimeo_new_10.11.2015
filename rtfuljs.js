@@ -59,14 +59,13 @@ for (i=0; i<iframes.length; i++) {
 }
 
 $(window).load(function(){
+    console.log("$(window).load(function");
     $(function() {
-        alert("jQuery starting!")
+        console.log("$(function")
         //var iframe = $('iframe')[0];
         for (i=0; i<vimeo_iframes.length; i++) {
-            var iframe = vimeo_iframes[i];
-            var player = $f_rtfl(iframe);
+            var player = $f_rtfl(vimeo_iframes[i]);
 
-            // When the player is ready, add listeners for pause, finish, and playProgress
             player.addEvent('ready', function (id) {
                 alert('ready');
 
