@@ -49,8 +49,6 @@ for (i=0; i<iframes.length; i++) {
             iframe.setAttribute('id', idname);
             iframe_src_attr = iframe_src_attr + '&player_id=' + idname;
             iframe.setAttribute('src', iframe_src_attr);
-        }else{
-            console.log('id: ' + id);
         }
 
         //save only vimeo iframes
