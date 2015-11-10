@@ -60,7 +60,7 @@ for (i=0; i<iframes.length; i++) {
 
 $(window).load(function(){
     $(function() {
-        //alert("jQuery starting!")
+        alert("jQuery starting!")
         //var iframe = $('iframe')[0];
         for (i=0; i<vimeo_iframes.length; i++) {
             var iframe = vimeo_iframes[i];
