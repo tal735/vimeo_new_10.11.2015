@@ -13,7 +13,7 @@ Latest-Update: Exception caught and no longer appears. Works fine.
 /*
  NOTES:
 
- VIMEO's MUST HAVES REQUIREMENTS:
+ VIMEO's MUST-HAVE REQUIREMENTS:
 id=CHOSEN_ID  src=...?api=1&player_id=CHOSEN_ID
 
  1. api=1 in src is not necessary for some reason...
