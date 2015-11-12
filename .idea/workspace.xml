@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e81e1ea2-f150-4c53-9c3a-2d9fd32b84ff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/h.html" afterPath="$PROJECT_DIR$/h.html" />
-    </list>
+    <list default="true" id="e81e1ea2-f150-4c53-9c3a-2d9fd32b84ff" name="Default" comment="" />
     <ignored path="testViemo.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,10 +21,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="h.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="h.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2367531">
+            <state vertical-scroll-proportion="-8.75">
               <caret line="14" column="83" selection-start-line="14" selection-start-column="83" selection-end-line="14" selection-end-column="83" />
               <folding />
             </state>
@@ -57,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rtful_froogaloop.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="rtful_froogaloop.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rtful_froogaloop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.22612514">
               <caret line="169" column="0" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
               <folding />
             </state>
@@ -475,10 +473,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtful_froogaloop.js">
+    <entry file="file://$PROJECT_DIR$/h.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="169" column="0" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="14" column="83" selection-start-line="14" selection-start-column="83" selection-end-line="14" selection-end-column="83" />
           <folding />
         </state>
       </provider>
@@ -503,10 +501,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h.html">
+    <entry file="file://$PROJECT_DIR$/rtful_froogaloop.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2367531">
-          <caret line="14" column="83" selection-start-line="14" selection-start-column="83" selection-end-line="14" selection-end-column="83" />
+        <state vertical-scroll-proportion="0.22612514">
+          <caret line="169" column="0" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
           <folding />
         </state>
       </provider>
