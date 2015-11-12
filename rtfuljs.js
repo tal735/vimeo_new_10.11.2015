@@ -12,7 +12,7 @@ function loadjscssfile(filename, filetype) {
         document.getElementsByTagName("head")[0].appendChild(fileref);
 }
 
-//loadjscssfile("//f.vimeocdn.com/js/froogaloop2.min.js", "js"); //dynamically load and add this .js file. there is no need to load vimeo's original froogaloop. it is either used by the site admin or not. we should not bother about it.
+//loadjscssfile("//f.vimeocdn.com/js/froogaloop2.min.js", "js"); //there is no need to load vimeo's original froogaloop. it is either already used in the site or not.
 loadjscssfile("rtful_froogaloop.js", "js"); //dynamically load and add this .js file
 
 // store all vimeo iframes for later reference
@@ -65,21 +65,22 @@ $(window).load(function () {
             var player = $f_rtfl(vimeo_iframes[i]);
 
             player.addEvent('ready', function (id) {
-                console.log('ready' + ' ' + id);
+                console.log('RTFUL ready' + ' ' + id);
 
                 player.addEvent('play', function (id) {
-                    console.log('play');
+                    console.log('RTFUL play');
                 });
                 player.addEvent('pause', function (id) {
-                    console.log('paused');
+                    console.log('RTFUL paused');
                 });
                 player.addEvent('finish', function (id) {
-                    console.log('finished');
+                    console.log('RTFUL finished');
                 });
             });
         }
     });
 });
+
 
 /*
  NOTES:

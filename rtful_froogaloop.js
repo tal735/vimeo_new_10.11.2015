@@ -150,15 +150,32 @@ var Froogaloop = (function(){
             return false;
         }
 
+
+
         if (playerOrigin === '*') {
             playerOrigin = event.origin;
         }
 
+        /*
         var value = data.value,
             eventData = data.data,
             target_id = target_id === '' ? null : data.player_id,
             callback = getCallback(method, target_id),
             params = [];
+        */
+        var value = data.value,
+            eventData = data.data,
+            target_id = target_id === '' ? null : data.player_id,
+            params = [];
+
+
+        var callback;
+        //catch early 'ready' messages from player that can't be handled because html dom is still changing.
+        try{
+            callback = getCallback(method, target_id);
+        }catch(err){
+            return false;
+        }
 
         if (!callback) {
             return false;
