@@ -168,7 +168,7 @@ var Froogaloop = (function(){
             target_id = target_id === '' ? null : data.player_id,
             params = [];
 
-
+        /added
         var callback;
         //catch early 'ready' messages from player that can't be handled because html dom is still changing.
         try{
